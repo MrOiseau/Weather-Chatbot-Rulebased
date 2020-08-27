@@ -59,7 +59,7 @@ let currentWeather = response => {
   }
 };
 
-let WeatherForecastNoWeatherInput = (response, data) => {
+let forecastNoWeatherInput = (response, data) => {
   if(response.lokacija){
     let parseDate = getDate(data.time);
 
@@ -90,6 +90,6 @@ let forecastWeather = (response, data) => {
 
 module.exports = {
   currentWeather,
-  WeatherForecastNoWeatherInput,
+  forecastNoWeatherInput,
   forecastWeather
 };

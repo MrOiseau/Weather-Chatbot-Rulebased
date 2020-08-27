@@ -9,7 +9,7 @@ const FBinterface = require('./fbinterface');
 // Vremenko - chatbot in terminal
 const matcher = require('./matcher');
 const weather = require('./weather');
-const {currentWeather, forecastWeather} = require('./parser');
+const {currentWeather, forecastNoWeatherInput, forecastWeather} = require('./parser');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -54,9 +54,9 @@ app.post('/', (req, res, next) => {
 
             case 'WeatherForecastNoWeatherInput':
               await f.txt(data.sender, 'Dozvolite mi da proverim...');
-              let wfData = await weather(resp.entities.city);
-              let wfResult = forecastWeather(wfData, resp.entities);
-              await f.txt(data.sender, wfResult);
+              let wfnwiData = await weather(resp.entities.city);
+              let wfnwiResult = forecastNoWeatherInput(wfnwiData, resp.entities);
+              await f.txt(data.sender, wfnwiResult);
               break;
 
             case 'WeatherForecast':
