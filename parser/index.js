@@ -90,5 +90,6 @@ let forecastWeather = (response, data) => {
 
 module.exports = {
   currentWeather,
+  WeatherForecastNoWeatherInput,
   forecastWeather
 };

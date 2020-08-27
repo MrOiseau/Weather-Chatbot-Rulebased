@@ -40,7 +40,7 @@ app.post('/', (req, res, next) => {
             case 'Thanks':
               await f.txt(data.sender,'Nema na čemu i drugi put! :)');
               break;
-              
+
             case 'Exit':
               await f.txt(data.sender,'Prijatan dan! :)');
               break;
@@ -50,6 +50,13 @@ app.post('/', (req, res, next) => {
               let cwData = await weather(resp.entities.city, 'current');
               let cwResult = currentWeather(cwData);
               await f.txt(data.sender, cwResult);
+              break;
+
+            case 'WeatherForecastNoWeatherInput':
+              await f.txt(data.sender, 'Dozvolite mi da proverim...');
+              let wfData = await weather(resp.entities.city);
+              let wfResult = forecastWeather(wfData, resp.entities);
+              await f.txt(data.sender, wfResult);
               break;
 
             case 'WeatherForecast':
