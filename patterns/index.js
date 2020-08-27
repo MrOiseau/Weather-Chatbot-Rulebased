@@ -23,7 +23,7 @@ const patternDict = [
     },
     {
       pattern:
-        "\\b(?<time>prekosutra|sutra|danas)\\b\\s\\b(?<weather>(ki[ščsicaetn]{2,7}|plju[sakoviščne]{3,5})|grada?|[su]{0,2}sne[žyzicag]{1,4}|[iz]{0,2}magl[icae]{1,3}|smog[a]{0,1}|pra(š|s)in[aeom]{1,2}|pe(s|š)[akčno]{2,4}|oblač?c?no|(oblaka?|veda?ro?|sun(c|č)a[no]{0,2}))?\\b\\svreme\\sbiti\\su\\s\\b(?<city>[a-zžšćčđ]+[ a-zžšćčđ]+?)(?:\\?*)$",
+        "\\b(?<time>prekosutra|sutra|danas)\\b\\svreme\\sbiti\\su\\s\\b(?<city>[a-zžšćčđ]+[ a-zžšćčđ]+?)(?:\\?*)$",
       intent: "WeatherForecast"
     },
   ];
