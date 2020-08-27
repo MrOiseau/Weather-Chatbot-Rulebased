@@ -59,6 +59,19 @@ let currentWeather = response => {
   }
 };
 
+let WeatherForecastNoWeatherInput = (response, data) => {
+  if(response.lokacija){
+    let parseDate = getDate(data.time);
+
+    let { lokacija } = response;
+    let { kod } = response.forecast.filter(i => i.datum === parseDate)[0];
+
+    return `Hej, ${response.entities.time}, ${getPrefix(kod, "future")} ${getVreme(kod)} ${data.time} u mestu ${lokacija}`;
+  } else {
+    return "Ne znam nista o ovoj lokaciji... Izvinite :(";
+  }
+};
+
 let forecastWeather = (response, data) => {
   if(response.lokacija){
     let parseDate = getDate(data.time);

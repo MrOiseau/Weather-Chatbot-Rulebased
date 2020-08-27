@@ -8,12 +8,17 @@ const patternDict = [
       intent: "Exit"
     },
     {
-      pattern: "z?a*hva+la+n?\\ss?a*m?(\\s){0,2}t?i*",
+      pattern: "[za]{0,2}hva+la+n?",
       intent: "Thanks"
     },
     {
       pattern: "vreme\\su\\s\\b(?<city>.+)",
       intent: "CurrentWeather"
+    },
+    {
+      pattern:
+        "\\b(?<time>prekosutra|sutra|danas)\\b[\\s(da\\sbude|biti)]{0,8}\\svreme[\\s(da\\sbude|biti)]{0,8}\\su\\s\\b(?<city>[a-zžšćčđ]+[ a-zžšćčđ]+?)(?:\\?*)$",
+      intent: "WeatherForecastNoWeatherInput"
     },
     {
       pattern:
@@ -25,11 +30,7 @@ const patternDict = [
         "\\b(?<weather>(ki[ščsicaetn]{2,7}|plju[sakoviščne]{3,5})|grada?|[su]{0,2}sne[žyzicag]{1,4}|[iz]{0,2}magl[icae]{1,3}|smog[a]{0,1}|pra(š|s)in[aeom]{1,2}|pe(s|š)[akčno]{2,4}|oblač?c?no|(oblaka?|veda?ro?|sun(c|č)a[no]{0,2}))\\b\\s\\b(?<time>prekosutra|sutra|danas)\\su\\s\\b(?<city>[a-zžšćčđ]+[ a-zžšćčđ]+?)(?:\\?*)$",
       intent: "WeatherForecast"
     },
-    {
-      pattern:
-        "\\b(?<time>prekosutra|sutra|danas)\\b[\\sbiti\\s]?\\svreme[\\sda]{0,3}[\\s(bude|biti)]{0,5}\\su\\s\\b(?<city>[a-zžšćčđ]+[ a-zžšćčđ]+?)(?:\\?*)$",
-      intent: "WeatherForecast"
-    },
+    
   ];
   
   module.exports = patternDict;
