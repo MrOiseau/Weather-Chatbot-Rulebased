@@ -8,7 +8,7 @@ const patternDict = [
       intent: "Exit"
     },
     {
-      pattern: "\\b[za]?hva+la+n?\\ssa+m\\sti+\\b",
+      pattern: "\\b[za]?hva+la+n?[[\\ssa+m*]?\\sti+]?\\b",
       intent: "Thanks"
     },
     {
@@ -27,7 +27,7 @@ const patternDict = [
     },
     {
       pattern:
-        "\\b(?<time>prekosutra|sutra|danas)\\b\\svreme\\sbiti\\su\\s\\b(?<city>[a-zžšćčđ]+[ a-zžšćčđ]+?)(?:\\?*)$",
+        "\\b(?<time>prekosutra|sutra|danas)\\b\\svreme\\s[da]{0,2}\\s(bude|biti)\\su\\s\\b(?<city>[a-zžšćčđ]+[ a-zžšćčđ]+?)(?:\\?*)$",
       intent: "WeatherForecast"
     },
   ];
