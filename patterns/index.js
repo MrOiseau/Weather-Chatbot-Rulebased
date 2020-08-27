@@ -1,6 +1,6 @@
 const patternDict = [
     {
-      pattern: "\\b(?<greeting>c?ć?a+o+|p?o*[zy]+dra+v+o*|he+ll*o+u*|h?[ie]+j*y*|dobar\\s[dan|jutro|vec?č?e]{3,5}|po+z?y?dra+v)\\b",
+      pattern: "\\b(?<greeting>c?ć?a+o+|p?o*[zy]+dra+v+o*|he+ll*o+u*|h[ie]+j*y*|dobar\\s[dan|jutro|vec?č?e]{3,5}|po+z?y?dra+v)\\b",
       intent: "Hello"
     },
     {
