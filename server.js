@@ -36,6 +36,9 @@ app.post('/', (req, res, next) => {
             case 'Hello':
               await f.txt(data.sender, `Hej, ${resp.entities.greeting} i Vama! Dobrodošli kod Vremenka!\n\nJa sam četbot koji Vam na srpskom jeziku može dati opis vremena za danas, sutra ili prekosutra za bilo koji grad na svetu, samo me upitajte!\nNpr. - Kakvo je vreme u Njujorku, ili pak - da li će padati kiša sutra u Beogradu, ili možda nešto poput - hoce li biti oblaka u novom sadu...\n\nP.S. Naravno, kao "rule-based" četbot, nikako nisam savršen - trenutno poznajem samo latinicu s' obzirom da je u Messenger komunikaciji ona najzastupljenija. Po nekad, ako ne prepoznam grad koji tražite, probajte mi pomoći unosom tog grada u nominativu (ahh ti padeži, nekada me zaista zbunjuju... zato ja obožavam najtopliji Niš, Vranje, Pirot :) )`);
               break;
+            case 'Thanks':
+              await f.txt(data.sender,'Nema na čemu i drugi put! :)');
+              break;
             case 'Exit':
               await f.txt(data.sender,'Prijatan dan! :)');
               break;

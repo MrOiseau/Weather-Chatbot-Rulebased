@@ -8,6 +8,10 @@ const patternDict = [
       intent: "Exit"
     },
     {
+      pattern: "\\hva+la+\\b",
+      intent: "Thanks"
+    },
+    {
       pattern: "vreme\\su\\s\\b(?<city>.+)",
       intent: "CurrentWeather"
     },
