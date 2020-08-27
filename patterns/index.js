@@ -12,7 +12,7 @@ const patternDict = [
       intent: "Thanks"
     },
     {
-      pattern: "vreme\\su\\s\\b(?<city>.+)",
+      pattern: "je\\s[danas\\s]{0,6}vreme\\su\\s\\b(?<city>.+)",
       intent: "CurrentWeather"
     },
     {
