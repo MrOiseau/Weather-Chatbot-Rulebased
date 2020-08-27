@@ -66,7 +66,7 @@ let forecastNoWeatherInput = (response, data) => {
     let { lokacija } = response;
     let { kod } = response.forecast.filter(i => i.datum === parseDate)[0];
 
-    return `Hej, ${response.entities.time}, ${getPrefix(kod, "future")} ${getVreme(kod)} ${data.time} u mestu ${lokacija}`;
+    return `Hej, ${response.time}, ${getPrefix(kod, "future")} ${getVreme(kod)} ${data.time} u mestu ${lokacija}`;
   } else {
     return "Ne znam nista o ovoj lokaciji... Izvinite :(";
   }
