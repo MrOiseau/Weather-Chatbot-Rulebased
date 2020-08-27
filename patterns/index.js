@@ -8,7 +8,7 @@ const patternDict = [
       intent: "Exit"
     },
     {
-      pattern: "\\hva+la+\\b",
+      pattern: "\\b[za]?hva+la+n?\\ssa+m\\sti+\\b",
       intent: "Thanks"
     },
     {
