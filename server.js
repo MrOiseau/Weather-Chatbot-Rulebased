@@ -9,7 +9,7 @@ const FBinterface = require('./fbinterface');
 // Vremenko - chatbot in terminal
 const matcher = require('./matcher');
 const weather = require('./weather');
-const {currentWeather, forecastNoWeatherInput, forecastWeather} = require('./parser');
+const { currentWeather, forecastNoWeatherInput, forecastWeather} = require('./parser');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -48,7 +48,7 @@ app.post('/', (req, res, next) => {
             case 'CurrentWeather':
               await f.txt(data.sender, 'Dozvolite mi da proverim...');
               let cwData = await weather(resp.entities.city, 'current');
-              let cwResult = currentWeather(cwData);
+              let cwResult = currentWeather(cwData, resp.entities);
               await f.txt(data.sender, cwResult);
               break;
 
@@ -78,7 +78,7 @@ app.post('/', (req, res, next) => {
       //   await f.img(data.sender, 'https://i.pinimg.com/originals/21/df/72/21df72fbbc1bbe0f7496b06ce60fb7cb.jpg');
       // }
     } catch (error) {
-      console.log(e);
+      console.log(error);
     }
     
   });

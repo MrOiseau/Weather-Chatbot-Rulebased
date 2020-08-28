@@ -50,10 +50,14 @@ let getDate = day => {
   }
 }
 
-let currentWeather = response => {
+let currentWeather = (response, data) => {
   if (response.lokacija) {
     const { lokacija, kod, temperatura } = response;
-    return `Trenutno ${getPrefix(kod)} ${getVreme(kod)} u mestu ${lokacija}.\nSubjektivno je ${getFeel(Number(temperatura))} sa ${String(temperatura)} stepeni Celziusa.`;
+    if(data.time && (data.time == "danas" || data.time == "sutra" || data.time == "prekosutra")){
+      return forecastNoWeatherInput;
+    } else {
+      return `Trenutno ${getPrefix(kod)} ${getVreme(kod)} u mestu ${lokacija}.\nSubjektivno je ${getFeel(Number(temperatura))} sa ${String(temperatura)} stepeni Celziusa.`;
+    }
   } else {
     return "Ne znam nista o ovoj lokaciji... Izvinite :(";
   }
@@ -63,10 +67,13 @@ let forecastNoWeatherInput = (response, data) => {
   if(response.lokacija){
     let parseDate = getDate(data.time);
 
-    let { lokacija } = response;
+    let { lokacija, temperatura } = response;
     let { kod } = response.forecast.filter(i => i.datum === parseDate)[0];
 
-    return `Proverio sam... ${getPrefix(kod, "future")} ${getVreme(kod)} ${data.time} u mestu ${lokacija}`;
+    if(data.time && (data.time == "sutra" || data.time == "prekosutra"))
+      return `Proverio sam... ${getPrefix(kod, "future")} ${getVreme(kod)} ${data.time} u mestu ${lokacija}`;     ///dodaj temp i osecaj
+    else
+      return currentWeather;
   } else {
     return "Ne znam nista o ovoj lokaciji... Izvinite :(";
   }
