@@ -65,7 +65,7 @@ let forecastNoWeatherInput = (response, data) => {
 
     let { lokacija } = response;
     let { kod } = response.forecast.filter(i => i.datum === parseDate)[0];
-    let dataTime = data.time.charAt(0).toUpperCase() + data.time.slice(1);
+    let dataTime = (data.time).charAt(0).toUpperCase() + data.time.slice(1);
 
     return `${dataTime} ${getPrefix(kod, "future")} ${getVreme(kod)} u mestu ${lokacija}`;
   } else {
