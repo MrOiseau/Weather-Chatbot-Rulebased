@@ -12,14 +12,47 @@ const patternDict = [
       intent: "Thanks"
     },
     {
-      pattern: "je\\s[danas\\s]{0,6}vreme\\su\\s\\b(?<city>.+)",
+      pattern: "vreme\\s(u|za)\\s\\b(?<city>.+)",
       intent: "CurrentWeather"
     },
     {
+      pattern: "(u|za)\\s\\b(?<city>.+)\\svreme",
+      intent: "CurrentWeather"
+    },
+    
+    {
       pattern:
-        "\\b(?<time>prekosutra|sutra|danas)\\b[\\s(da\\sbude|biti)]{0,8}\\svreme[\\s(da\\sbude|biti)]{0,8}\\su\\s\\b(?<city>[a-zžšćčđ]+[ a-zžšćčđ]+?)(?:\\?*)$",
+        "\\b(?<time>prekosutra|sutra|danas)\\b\\s(kakvo?a?\\s)?(je\\s|ć?c?e\\s)?(da\\sbude\\s|biti\\s)?(vreme|prognoza?u?)\\s(kakvo?a?\\s)?(je\\s|ć?c?e\\s)?(da\\sbude\\s|biti\\s)?(u\\s|za\\s)?\\b[a-zžšćčđ]+[ a-zžšćčđ]+?(?:\\?*)$",
       intent: "WeatherForecastNoWeatherInput"
     },
+    {
+      pattern:
+        "\\b(?<time>prekosutra|sutra|danas)\\b\\s(kakvo?a?\\s)?(je\\s|ć?c?e\\s)?(da\\sbude\\s|biti\\s)?(u\\s|za\\s)?\\b[a-zžšćčđ]+[ a-zžšćčđ]+?\\s(kakvo?a?\\s)?(je\\s|ć?c?e\\s)?(da\\sbude\\s|biti\\s)?\\b(vreme|prognoza?u?)(?:\\?*)$",
+      intent: "WeatherForecastNoWeatherInput"
+    },
+
+    {
+      pattern:
+        " (vreme|prognoza?u?)\\s(kakvo?a?\\s)?(je\\s|ć?c?e\\s)?(da\\sbude\\s|biti\\s)?(za\\s)?\\b(?<time>prekosutra|sutra|danas)\\b\\s(kakvo?a?\\s)?(je\\s|ć?c?e\\s)?(da\\sbude\\s|biti\\s)?(u\\s|za\\s)?\\b[a-zžšćčđ]+[ a-zžšćčđ]+?(?:\\?*)$",
+      intent: "WeatherForecastNoWeatherInput"
+    },
+    {
+      pattern:
+        " (vreme|prognoza?u?)\\s(kakvo?a?\\s)?(je\\s|ć?c?e\\s)?(da\\sbude\\s|biti\\s)?(u\\s|za\\s)?\\b[a-zžšćčđ]+[ a-zžšćčđ]+?\\s(kakvo?a?\\s)?(je\\s|ć?c?e\\s)?(da\\sbude\\s|biti\\s)?(za\\s)?\\b(?<time>prekosutra|sutra|danas)\\b(?:\\?*)$",
+      intent: "WeatherForecastNoWeatherInput"
+    },
+
+    {
+      pattern:
+        "\\b[a-zžšćčđ]+[ a-zžšćčđ]+?\\s(kakvo?a?\\s)?(je\\s|ć?c?e\\s)?(da\\sbude\\s|biti\\s)?(za\\s)?\\b(?<time>prekosutra|sutra|danas)\\b(kakvo?a?\\s)?(je\\s|ć?c?e\\s)?(da\\sbude\\s|biti\\s)?\\s(vreme|prognoza?u?)(?:\\?*)$",
+      intent: "WeatherForecastNoWeatherInput"
+    },
+    {
+      pattern:
+        "\\b[a-zžšćčđ]+[ a-zžšćčđ]+?\\s(kakvo?a?\\s)?(je\\s|ć?c?e\\s)?(da\\sbude\\s|biti\\s)? (vreme|prognoza?u?)\\s(kakvo?a?\\s)?(je\\s|ć?c?e\\s)?(da\\sbude\\s|biti\\s)?(za\\s)?\\b(?<time>prekosutra|sutra|danas)\\b(?:\\?*)$",
+      intent: "WeatherForecastNoWeatherInput"
+    },
+
     {
       pattern:
         "\\b(?<weather>(ki[ščsicaetn]{2,7}|plju[sakoviščne]{3,5})|grada?|[su]{0,2}sne[žyzicag]{1,4}|[iz]{0,2}magl[icae]{1,3}|smog[a]{0,1}|pra(š|s)in[aeom]{1,2}|pe(s|š)[akčno]{2,4}|oblač?c?no|(oblaka?|veda?ro?|sun(c|č)a[no]{0,2}))\\b\\su\\s\\b(?<city>[a-zžšćčđ]+[ a-zžšćčđ]+?)\\b(?<time>prekosutra|sutra|danas)(?:\\?*)$",
