@@ -1,6 +1,6 @@
 # A rule-based weather chatbot
  ## Descirption:
- A simple messenger rule-based weather bot that is implemented using NodeJs for the backend.
+ Messenger rule-based weather bot that is implemented using NodeJs for the backend.
 
  ## How it works:
  The bot integrates with the a real weather API that feeds it with data about a specific city's weather, so all you have to do is to ask the bot for the weather on Serbian (latin alphabet with or without "č,ć,ž,š,đ") and you get the forecast immediatly parsed in more human like response.
