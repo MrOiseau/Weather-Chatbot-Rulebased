@@ -11,7 +11,7 @@
 
 **Original conversation (Serbian):** <br/>
 <br/>
-&emsp;&emsp; <img src="./Screenshots/one.PNG" width="400" alt="Photo_of_conversation_1">
+&emsp; <img src="./Screenshots/one.PNG" width="400" alt="Photo_of_conversation_1">
 
 <br/>
 &emsp;&emsp; <img src="./Screenshots/two.PNG" width="400" alt="Photo_of_conversation_2">
