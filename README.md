@@ -18,10 +18,10 @@
  ----------------------------------------------------
  <br/>
 &emsp;&emsp; <img src="./Screenshots/three.PNG" width="400" alt="Photo_of_conversation_3">
- ----------------------------------------------------
+ ---------------------------------------------------- <br/>
  **Conversation translated on English:**
   <br/>
-&emsp;&emsp; <img src="./Screenshots/four.jpg" width="600" alt="Photo_of_conversation_eng">
+&emsp;&emsp; <img src="./Screenshots/four.jpg" width="800" alt="Photo_of_conversation_eng">
 
  ## Final talk:
  This project is deployed on free dyno on Heruko, so after not usage or spending my free dyno hours that I get each month, it'll go to sleep until I wake him up again. But, if that happend, you know that sleep makes human digest knowledge, so as we, he may come smarter. Greetings up until my next project!
