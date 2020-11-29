@@ -10,18 +10,18 @@
  ## Screen shots:
  
  **Original conversation (Serbian):** <br/>
-   <br/>
-&emsp;&emsp; <img src="./Screenshots/one.PNG" width="600" alt="Photo_of_conversation_1">
+<br/>
+&emsp;&emsp; <img src="./Screenshots/one.PNG" width="400" alt="Photo_of_conversation_1">
  ----------------------------------------------------
-
- ![two](./Screenshots/two.PNG)
+ <br/>
+&emsp;&emsp; <img src="./Screenshots/two.PNG" width="400" alt="Photo_of_conversation_2">
  ----------------------------------------------------
-
- ![three](./Screenshots/three.PNG)
+ <br/>
+&emsp;&emsp; <img src="./Screenshots/three.PNG" width="400" alt="Photo_of_conversation_3">
  ----------------------------------------------------
- Conversation translated on English:
-
- ![four](./Screenshots/four.jpg)
+ **Conversation translated on English:**
+  <br/>
+&emsp;&emsp; <img src="./Screenshots/four.jpg" width="600" alt="Photo_of_conversation_eng">
 
  ## Final talk:
  This project is deployed on free dyno on Heruko, so after not usage or spending my free dyno hours that I get each month, it'll go to sleep until I wake him up again. But, if that happend, you know that sleep makes human digest knowledge, so as we, he may come smarter. Greetings up until my next project!
