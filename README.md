@@ -9,9 +9,9 @@
 
  ## Screen shots:
  
- Original conversation (Serbian):
-
- ![one](./Screenshots/one.PNG)
+ **Original conversation (Serbian):** <br/>
+   <br/>
+&emsp;&emsp; <img src="./Screenshots/one.PNG" width="600" alt="Photo_of_conversation_1">
  ----------------------------------------------------
 
  ![two](./Screenshots/two.PNG)
